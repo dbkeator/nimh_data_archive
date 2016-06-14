@@ -2,6 +2,9 @@
 """
 NIMH Data Archive Data Structure Client
 
+Example:
+    nimh_data_archive -d demof01 child_dem01
+
 """
 __author__ = 'Nolan Nichols <https://orcid.org/0000-0003-1099-3328>'
 
