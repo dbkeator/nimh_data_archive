@@ -86,7 +86,7 @@ class DataElement(object):
         self.description = data.get('description')
         self.title = data.get('title')
         if self.data.get('notes'):
-            self.notes = self.parse_notes()
+            self.parse_notes()
         if self.data.get('valueRange'):
             self.value_range = self.parse_value_range()
 
@@ -96,7 +96,7 @@ class DataElement(object):
         valueset = list()
         for codes in codelist:
             values = codes.split("=", 1)
-            if (len(values) > 1) and not (self.data.get('notes') == ""):
+            if (len(values) > 1) and not (self.data.get('notes') == "null"):
                 self.data.update({'notes': ""})
             if len(values) > 1:
                 result = dict()
