@@ -1,0 +1,4391 @@
+{
+    "status": "Published",
+    "title": "Demographic Form",
+    "dataType": "Clinical Assessments",
+    "publishDate": null,
+    "sources": [
+        "NDCT"
+    ],
+    "shortName": "demof01",
+    "categories": [
+        "Demographics"
+    ],
+    "dataElements": [
+        {
+            "filterElement": null,
+            "name": "subjectkey",
+            "description": "The NDAR Global Unique Identifier (GUID) for research subject",
+            "required": "Required",
+            "translations": [],
+            "valueRange": "NDAR*",
+            "dataElementId": 1,
+            "notes": null,
+            "position": 1,
+            "size": null,
+            "type": "GUID",
+            "id": 2085112,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": null,
+            "name": "src_subject_id",
+            "description": "Subject ID how it's defined in lab/project",
+            "required": "Required",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 2,
+            "notes": null,
+            "position": 2,
+            "size": 20,
+            "type": "String",
+            "id": 2085113,
+            "condition": null,
+            "aliases": [
+                "stepid",
+                "catieid",
+                "bid"
+            ]
+        },
+        {
+            "valueset": [],
+            "filterElement": null,
+            "name": "interview_date",
+            "description": "Date on which the interview/genetic test/sampling/imaging was completed. MM/DD/YYYY",
+            "required": "Required",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 3,
+            "notes": "Required field",
+            "position": 3,
+            "size": null,
+            "type": "Date",
+            "id": 2085114,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [],
+            "filterElement": "1",
+            "name": "interview_age",
+            "description": "Age in months at the time of the interview/test/sampling/imaging.",
+            "required": "Required",
+            "translations": [],
+            "valueRange": "0 :: 1260",
+            "dataElementId": 4,
+            "notes": "Age is rounded to chronological month. If the research participant is 15-days-old at time of interview, the appropriate value would be 0 months. If the participant is 16-days-old, the value would be 1 month.",
+            "position": 4,
+            "size": null,
+            "type": "Integer",
+            "id": 2085115,
+            "condition": null,
+            "aliases": [
+                "age"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "M",
+                    "label": "Male"
+                },
+                {
+                    "code": "F",
+                    "label": "Female"
+                }
+            ],
+            "filterElement": "1",
+            "name": "gender",
+            "description": "Sex of the subject",
+            "required": "Required",
+            "translations": [
+                {
+                    "values": [
+                        "1"
+                    ],
+                    "key": "M"
+                },
+                {
+                    "values": [
+                        "Male"
+                    ],
+                    "key": "M"
+                },
+                {
+                    "values": [
+                        "2"
+                    ],
+                    "key": "F"
+                },
+                {
+                    "values": [
+                        "Female"
+                    ],
+                    "key": "F"
+                }
+            ],
+            "valueRange": "M;F",
+            "dataElementId": 10,
+            "notes": "",
+            "position": 5,
+            "size": 20,
+            "type": "String",
+            "id": 2085116,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "daysrz",
+            "description": "days since randomization",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1287021,
+            "notes": null,
+            "position": 6,
+            "size": null,
+            "type": "Integer",
+            "id": 2085117,
+            "condition": null,
+            "aliases": [
+                "dayscons"
+            ]
+        },
+        {
+            "valueset": [],
+            "filterElement": "1",
+            "name": "visit",
+            "description": "Visit name",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1279301,
+            "notes": "Character description of each type of visit",
+            "position": 7,
+            "size": 50,
+            "type": "String",
+            "id": 2085118,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "certcode",
+            "description": "stepbd certification code",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1287010,
+            "notes": null,
+            "position": 8,
+            "size": null,
+            "type": "Integer",
+            "id": 2085119,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "ccc2spenglis",
+            "description": "Details of primary language",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1252305,
+            "notes": null,
+            "position": 9,
+            "size": 200,
+            "type": "String",
+            "id": 2085120,
+            "condition": null,
+            "aliases": [
+                "primlang"
+            ]
+        },
+        {
+            "filterElement": "1",
+            "name": "race",
+            "description": "Race of participant",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "American Indian/Alaska Native; Asian; Hawaiian or Pacific Islander; Black or African American; White; More than one race; Unknown or not reported",
+            "dataElementId": 19191,
+            "notes": null,
+            "position": 10,
+            "size": 30,
+            "type": "String",
+            "id": 2085121,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Mexican/Mexican American/Chicano"
+                },
+                {
+                    "code": "2",
+                    "label": "Cuban/Cuban American"
+                },
+                {
+                    "code": "3",
+                    "label": "Puerto Rican"
+                },
+                {
+                    "code": "4",
+                    "label": "Dominican"
+                },
+                {
+                    "code": "5",
+                    "label": "Other"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "etnic_group",
+            "description": "specify ehtnicity",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::5;-7",
+            "dataElementId": 1292900,
+            "notes": "",
+            "position": 11,
+            "size": null,
+            "type": "Integer",
+            "id": 2085123,
+            "condition": null,
+            "aliases": [
+                "ethnspec"
+            ]
+        },
+        {
+            "filterElement": "1",
+            "name": "das1ms",
+            "description": "Marital status",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1253848,
+            "notes": null,
+            "position": 12,
+            "size": 75,
+            "type": "String",
+            "id": 2085124,
+            "condition": null,
+            "aliases": [
+                "marstat",
+                "marital",
+                "dema5"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "yes"
+                },
+                {
+                    "code": "0",
+                    "label": "no"
+                }
+            ],
+            "filterElement": "1",
+            "name": "qol01g",
+            "description": "Lives alone",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1279472,
+            "notes": "",
+            "position": 13,
+            "size": null,
+            "type": "Integer",
+            "id": 2085125,
+            "condition": null,
+            "aliases": [
+                "livealon"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "grphome",
+            "description": "residential group home",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292669,
+            "notes": "",
+            "position": 14,
+            "size": null,
+            "type": "Integer",
+            "id": 2085126,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Spouse"
+                },
+                {
+                    "code": "2",
+                    "label": "Parent"
+                },
+                {
+                    "code": "3",
+                    "label": "Child"
+                },
+                {
+                    "code": "4",
+                    "label": "Sibling"
+                },
+                {
+                    "code": "5",
+                    "label": "Grandchild"
+                },
+                {
+                    "code": "6",
+                    "label": "Aunt/Uncle"
+                },
+                {
+                    "code": "7",
+                    "label": "Niece/Nephew"
+                },
+                {
+                    "code": "8",
+                    "label": "Other Relative (specify)"
+                },
+                {
+                    "code": "9",
+                    "label": "Friend/Roommate"
+                },
+                {
+                    "code": "10",
+                    "label": "Other (specify)"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmem1",
+            "description": "household member 1",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::10;-7",
+            "dataElementId": 1292940,
+            "notes": "",
+            "position": 15,
+            "size": null,
+            "type": "Integer",
+            "id": 2085127,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Male"
+                },
+                {
+                    "code": "2",
+                    "label": "Female"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmemsex1",
+            "description": "household member sex 1",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1292913,
+            "notes": "",
+            "position": 16,
+            "size": null,
+            "type": "Integer",
+            "id": 2085128,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "hmemage1",
+            "description": "household member age 1",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292954,
+            "notes": null,
+            "position": 17,
+            "size": null,
+            "type": "Integer",
+            "id": 2085129,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Spouse"
+                },
+                {
+                    "code": "2",
+                    "label": "Parent"
+                },
+                {
+                    "code": "3",
+                    "label": "Child"
+                },
+                {
+                    "code": "4",
+                    "label": "Sibling"
+                },
+                {
+                    "code": "5",
+                    "label": "Grandchild"
+                },
+                {
+                    "code": "6",
+                    "label": "Aunt/Uncle"
+                },
+                {
+                    "code": "7",
+                    "label": "Niece/Nephew"
+                },
+                {
+                    "code": "8",
+                    "label": "Other Relative (specify)"
+                },
+                {
+                    "code": "9",
+                    "label": "Friend/Roommate"
+                },
+                {
+                    "code": "10",
+                    "label": "Other (specify)"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmem2",
+            "description": "household member 2",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::10;-7",
+            "dataElementId": 1292909,
+            "notes": "",
+            "position": 18,
+            "size": null,
+            "type": "Integer",
+            "id": 2085130,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Male"
+                },
+                {
+                    "code": "2",
+                    "label": "Female"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmemsex2",
+            "description": "household member sex 2",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1292919,
+            "notes": "",
+            "position": 19,
+            "size": null,
+            "type": "Integer",
+            "id": 2085131,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "hmemage2",
+            "description": "household member age 2",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292929,
+            "notes": null,
+            "position": 20,
+            "size": null,
+            "type": "Integer",
+            "id": 2085132,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Spouse"
+                },
+                {
+                    "code": "2",
+                    "label": "Parent"
+                },
+                {
+                    "code": "3",
+                    "label": "Child"
+                },
+                {
+                    "code": "4",
+                    "label": "Sibling"
+                },
+                {
+                    "code": "5",
+                    "label": "Grandchild"
+                },
+                {
+                    "code": "6",
+                    "label": "Aunt/Uncle"
+                },
+                {
+                    "code": "7",
+                    "label": "Niece/Nephew"
+                },
+                {
+                    "code": "8",
+                    "label": "Other Relative (specify)"
+                },
+                {
+                    "code": "9",
+                    "label": "Friend/Roommate"
+                },
+                {
+                    "code": "10",
+                    "label": "Other (specify)"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmem3",
+            "description": "household member 3",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::10;-7",
+            "dataElementId": 1292928,
+            "notes": "",
+            "position": 21,
+            "size": null,
+            "type": "Integer",
+            "id": 2085133,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Male"
+                },
+                {
+                    "code": "2",
+                    "label": "Female"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmemsex3",
+            "description": "household member sex 3",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1292936,
+            "notes": "",
+            "position": 22,
+            "size": null,
+            "type": "Integer",
+            "id": 2085134,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "hmemage3",
+            "description": "household member age 3",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292920,
+            "notes": null,
+            "position": 23,
+            "size": null,
+            "type": "Integer",
+            "id": 2085135,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Spouse"
+                },
+                {
+                    "code": "2",
+                    "label": "Parent"
+                },
+                {
+                    "code": "3",
+                    "label": "Child"
+                },
+                {
+                    "code": "4",
+                    "label": "Sibling"
+                },
+                {
+                    "code": "5",
+                    "label": "Grandchild"
+                },
+                {
+                    "code": "6",
+                    "label": "Aunt/Uncle"
+                },
+                {
+                    "code": "7",
+                    "label": "Niece/Nephew"
+                },
+                {
+                    "code": "8",
+                    "label": "Other Relative (specify)"
+                },
+                {
+                    "code": "9",
+                    "label": "Friend/Roommate"
+                },
+                {
+                    "code": "10",
+                    "label": "Other (specify)"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmem4",
+            "description": "household member 4",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::10;-7",
+            "dataElementId": 1292941,
+            "notes": "",
+            "position": 24,
+            "size": null,
+            "type": "Integer",
+            "id": 2085136,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Male"
+                },
+                {
+                    "code": "2",
+                    "label": "Female"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmemsex4",
+            "description": "household member sex 4",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1292948,
+            "notes": "",
+            "position": 25,
+            "size": null,
+            "type": "Integer",
+            "id": 2085137,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "hmemage4",
+            "description": "household member age 4",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292921,
+            "notes": null,
+            "position": 26,
+            "size": null,
+            "type": "Integer",
+            "id": 2085138,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Spouse"
+                },
+                {
+                    "code": "2",
+                    "label": "Parent"
+                },
+                {
+                    "code": "3",
+                    "label": "Child"
+                },
+                {
+                    "code": "4",
+                    "label": "Sibling"
+                },
+                {
+                    "code": "5",
+                    "label": "Grandchild"
+                },
+                {
+                    "code": "6",
+                    "label": "Aunt/Uncle"
+                },
+                {
+                    "code": "7",
+                    "label": "Niece/Nephew"
+                },
+                {
+                    "code": "8",
+                    "label": "Other Relative (specify)"
+                },
+                {
+                    "code": "9",
+                    "label": "Friend/Roommate"
+                },
+                {
+                    "code": "10",
+                    "label": "Other (specify)"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmem5",
+            "description": "household member 5",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::10;-7",
+            "dataElementId": 1292961,
+            "notes": "",
+            "position": 27,
+            "size": null,
+            "type": "Integer",
+            "id": 2085139,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Male"
+                },
+                {
+                    "code": "2",
+                    "label": "Female"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmemsex5",
+            "description": "household member sex 5",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1292937,
+            "notes": "",
+            "position": 28,
+            "size": null,
+            "type": "Integer",
+            "id": 2085140,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "hmemage5",
+            "description": "household member age 5",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292962,
+            "notes": null,
+            "position": 29,
+            "size": null,
+            "type": "Integer",
+            "id": 2085141,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Spouse"
+                },
+                {
+                    "code": "2",
+                    "label": "Parent"
+                },
+                {
+                    "code": "3",
+                    "label": "Child"
+                },
+                {
+                    "code": "4",
+                    "label": "Sibling"
+                },
+                {
+                    "code": "5",
+                    "label": "Grandchild"
+                },
+                {
+                    "code": "6",
+                    "label": "Aunt/Uncle"
+                },
+                {
+                    "code": "7",
+                    "label": "Niece/Nephew"
+                },
+                {
+                    "code": "8",
+                    "label": "Other Relative (specify)"
+                },
+                {
+                    "code": "9",
+                    "label": "Friend/Roommate"
+                },
+                {
+                    "code": "10",
+                    "label": "Other (specify)"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmem6",
+            "description": "household member 6",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::10;-7",
+            "dataElementId": 1292939,
+            "notes": "",
+            "position": 30,
+            "size": null,
+            "type": "Integer",
+            "id": 2085142,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Male"
+                },
+                {
+                    "code": "2",
+                    "label": "Female"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmemsex6",
+            "description": "household member sex 6",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1292932,
+            "notes": "",
+            "position": 31,
+            "size": null,
+            "type": "Integer",
+            "id": 2085143,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "hmemage6",
+            "description": "household member age 6",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292905,
+            "notes": null,
+            "position": 32,
+            "size": null,
+            "type": "Integer",
+            "id": 2085144,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Spouse"
+                },
+                {
+                    "code": "2",
+                    "label": "Parent"
+                },
+                {
+                    "code": "3",
+                    "label": "Child"
+                },
+                {
+                    "code": "4",
+                    "label": "Sibling"
+                },
+                {
+                    "code": "5",
+                    "label": "Grandchild"
+                },
+                {
+                    "code": "6",
+                    "label": "Aunt/Uncle"
+                },
+                {
+                    "code": "7",
+                    "label": "Niece/Nephew"
+                },
+                {
+                    "code": "8",
+                    "label": "Other Relative (specify)"
+                },
+                {
+                    "code": "9",
+                    "label": "Friend/Roommate"
+                },
+                {
+                    "code": "10",
+                    "label": "Other (specify)"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmem7",
+            "description": "household member 7",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::10;-7",
+            "dataElementId": 1292922,
+            "notes": "",
+            "position": 33,
+            "size": null,
+            "type": "Integer",
+            "id": 2085145,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Male"
+                },
+                {
+                    "code": "2",
+                    "label": "Female"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmemsex7",
+            "description": "household member sex 7",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1292958,
+            "notes": "",
+            "position": 34,
+            "size": null,
+            "type": "Integer",
+            "id": 2085146,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "hmemage7",
+            "description": "household member age 7",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292956,
+            "notes": null,
+            "position": 35,
+            "size": null,
+            "type": "Integer",
+            "id": 2085147,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "dependts",
+            "description": "hom many dependents in house",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292951,
+            "notes": null,
+            "position": 36,
+            "size": null,
+            "type": "Integer",
+            "id": 2085148,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "cohead",
+            "description": "cohead of household",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292914,
+            "notes": "",
+            "position": 37,
+            "size": null,
+            "type": "Integer",
+            "id": 2085149,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Private home"
+                },
+                {
+                    "code": "2",
+                    "label": "Apartment in private home"
+                },
+                {
+                    "code": "3",
+                    "label": "Apartment building"
+                },
+                {
+                    "code": "4",
+                    "label": "Mobile home"
+                },
+                {
+                    "code": "5",
+                    "label": "Public housing"
+                },
+                {
+                    "code": "6",
+                    "label": "Military housing"
+                },
+                {
+                    "code": "7",
+                    "label": "Group home/assisted living facility"
+                },
+                {
+                    "code": "8",
+                    "label": "Other"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "residenc",
+            "description": "describes primary residence",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::8;-7",
+            "dataElementId": 1292944,
+            "notes": "",
+            "position": 38,
+            "size": null,
+            "type": "Integer",
+            "id": 2085150,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "You own or pay mortgage on your primary residence"
+                },
+                {
+                    "code": "2",
+                    "label": "You pay rent on your primary residence"
+                },
+                {
+                    "code": "3",
+                    "label": "Other"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "ownrent",
+            "description": "best describes payment",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::3;-7",
+            "dataElementId": 1292942,
+            "notes": "",
+            "position": 39,
+            "size": null,
+            "type": "Integer",
+            "id": 2085151,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Less than seventh grade"
+                },
+                {
+                    "code": "2",
+                    "label": "Seventh grade-ninth grade"
+                },
+                {
+                    "code": "3",
+                    "label": "Partial high school"
+                },
+                {
+                    "code": "4",
+                    "label": "High school diploma or GED"
+                },
+                {
+                    "code": "5",
+                    "label": "Some college (at least one year)"
+                },
+                {
+                    "code": "6",
+                    "label": "Technical school or associates degree"
+                },
+                {
+                    "code": "7",
+                    "label": "College diploma (Bachelor's degree)"
+                },
+                {
+                    "code": "8",
+                    "label": "Graduate or professional degree"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "educate",
+            "description": "years of education completed",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::8;-7",
+            "dataElementId": 1292947,
+            "notes": "",
+            "position": 40,
+            "size": null,
+            "type": "Integer",
+            "id": 2085152,
+            "condition": null,
+            "aliases": [
+                "dem5"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Professional"
+                },
+                {
+                    "code": "2",
+                    "label": "Managers and administrators"
+                },
+                {
+                    "code": "3",
+                    "label": "Craftsmen and kindred workers"
+                },
+                {
+                    "code": "4",
+                    "label": "Clerical and sales workers"
+                },
+                {
+                    "code": "5",
+                    "label": "Laborers, operatives and kindred workers"
+                },
+                {
+                    "code": "6",
+                    "label": "Other"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "jobcode",
+            "description": "most appropriate job code",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::6;-7",
+            "dataElementId": 1292950,
+            "notes": "",
+            "position": 41,
+            "size": null,
+            "type": "Integer",
+            "id": 2085153,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "ftepay",
+            "description": "full time employment for pay",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292904,
+            "notes": "",
+            "position": 42,
+            "size": null,
+            "type": "Integer",
+            "id": 2085155,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "ftdays",
+            "description": "full time   days since randomization",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292907,
+            "notes": null,
+            "position": 43,
+            "size": null,
+            "type": "Integer",
+            "id": 2085156,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "hrwrkavg",
+            "description": "hours work on average",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292918,
+            "notes": null,
+            "position": 44,
+            "size": null,
+            "type": "Float",
+            "id": 2085157,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "wkswork",
+            "description": "weeks have you worked",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292934,
+            "notes": null,
+            "position": 45,
+            "size": null,
+            "type": "Float",
+            "id": 2085158,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "laidoff",
+            "description": "have you been laid off",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292952,
+            "notes": "",
+            "position": 46,
+            "size": null,
+            "type": "Integer",
+            "id": 2085159,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "fired",
+            "description": "have you been fired",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292953,
+            "notes": "",
+            "position": 47,
+            "size": null,
+            "type": "Integer",
+            "id": 2085160,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "daylate",
+            "description": "days late to work",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292926,
+            "notes": null,
+            "position": 48,
+            "size": null,
+            "type": "Integer",
+            "id": 2085161,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "dayearly",
+            "description": "days leave work early",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292910,
+            "notes": null,
+            "position": 49,
+            "size": null,
+            "type": "Integer",
+            "id": 2085162,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "fullattn",
+            "description": "cut back level of attention",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292938,
+            "notes": "",
+            "position": 50,
+            "size": null,
+            "type": "Integer",
+            "id": 2085163,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "nonwork",
+            "description": "spent on non work activities",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292927,
+            "notes": null,
+            "position": 51,
+            "size": null,
+            "type": "Float",
+            "id": 2085164,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "2",
+                    "label": "Part time"
+                }
+            ],
+            "filterElement": "1",
+            "name": "student",
+            "description": "Currently a student",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0::2",
+            "dataElementId": 1288823,
+            "notes": "",
+            "position": 52,
+            "size": null,
+            "type": "Integer",
+            "id": 2085165,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Full time"
+                },
+                {
+                    "code": "2",
+                    "label": "Part time"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "studfte",
+            "description": "student full time part time",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2;-7",
+            "dataElementId": 1292924,
+            "notes": "",
+            "position": 53,
+            "size": null,
+            "type": "Integer",
+            "id": 2085166,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "volwork",
+            "description": "do you do volunteer work",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292963,
+            "notes": "",
+            "position": 54,
+            "size": null,
+            "type": "Integer",
+            "id": 2085167,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Daily"
+                },
+                {
+                    "code": "2",
+                    "label": "Weekly"
+                },
+                {
+                    "code": "3",
+                    "label": "Monthly"
+                },
+                {
+                    "code": "4",
+                    "label": "Infrequently"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "volfreq",
+            "description": "volunteer work frequency",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::4;-7",
+            "dataElementId": 1292906,
+            "notes": "",
+            "position": 55,
+            "size": null,
+            "type": "Integer",
+            "id": 2085168,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "volhrs",
+            "description": "how many hours per week",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1292935,
+            "notes": null,
+            "position": 56,
+            "size": null,
+            "type": "Float",
+            "id": 2085169,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "Y",
+                    "label": "Yes"
+                },
+                {
+                    "code": "N",
+                    "label": "No"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "psysoc_89",
+            "description": "Veteran?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "Y;N;-7",
+            "dataElementId": 1278158,
+            "notes": "",
+            "position": 57,
+            "size": 5,
+            "type": "String",
+            "id": 2085170,
+            "condition": null,
+            "aliases": [
+                "veteran"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "less than $10,000"
+                },
+                {
+                    "code": "2",
+                    "label": "$10,000-$19,999"
+                },
+                {
+                    "code": "3",
+                    "label": "$20,000-$29,999"
+                },
+                {
+                    "code": "5",
+                    "label": "$40,000-$49,999"
+                },
+                {
+                    "code": "6",
+                    "label": "$50,000-$74,999"
+                },
+                {
+                    "code": "7",
+                    "label": "$75,000-$99,999"
+                },
+                {
+                    "code": "8",
+                    "label": "$100,000-$149,999"
+                },
+                {
+                    "code": "9",
+                    "label": "$150,000 or more"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "earnings",
+            "description": "annual personal income earning",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::9;-7",
+            "dataElementId": 1292916,
+            "notes": "",
+            "position": 58,
+            "size": null,
+            "type": "Integer",
+            "id": 2085171,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "less than $10,000"
+                },
+                {
+                    "code": "2",
+                    "label": "$10,000-$19,999"
+                },
+                {
+                    "code": "3",
+                    "label": "$20,000-$29,999"
+                },
+                {
+                    "code": "5",
+                    "label": "$40,000-$49,999"
+                },
+                {
+                    "code": "6",
+                    "label": "$50,000-$74,999"
+                },
+                {
+                    "code": "7",
+                    "label": "$75,000-$99,999"
+                },
+                {
+                    "code": "8",
+                    "label": "$100,000-$149,999"
+                },
+                {
+                    "code": "9",
+                    "label": "$150,000 or more"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "pincome",
+            "description": "annual personal income",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::9;-7",
+            "dataElementId": 1292911,
+            "notes": "",
+            "position": 59,
+            "size": null,
+            "type": "Integer",
+            "id": 2085172,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "srcwages",
+            "description": "source of income wages",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292923,
+            "notes": "",
+            "position": 60,
+            "size": null,
+            "type": "Integer",
+            "id": 2085173,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "srcssi",
+            "description": "sources of income ssi",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292901,
+            "notes": "",
+            "position": 61,
+            "size": null,
+            "type": "Integer",
+            "id": 2085174,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "srcssdi",
+            "description": "sources of income ssdi",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292943,
+            "notes": "",
+            "position": 62,
+            "size": null,
+            "type": "Integer",
+            "id": 2085175,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "srcwlfar",
+            "description": "sources of income welfare",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292964,
+            "notes": "",
+            "position": 63,
+            "size": null,
+            "type": "Integer",
+            "id": 2085176,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "srcafdc",
+            "description": "sources of income afdc",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292949,
+            "notes": "",
+            "position": 64,
+            "size": null,
+            "type": "Integer",
+            "id": 2085177,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "srcunemp",
+            "description": "sources of income unemployed",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292925,
+            "notes": "",
+            "position": 65,
+            "size": null,
+            "type": "Integer",
+            "id": 2085178,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "srcssec",
+            "description": "sources of income soc security",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292933,
+            "notes": "",
+            "position": 66,
+            "size": null,
+            "type": "Integer",
+            "id": 2085179,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "srcoth",
+            "description": "sources of income other",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292902,
+            "notes": "",
+            "position": 67,
+            "size": null,
+            "type": "Integer",
+            "id": 2085180,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "a",
+                    "label": "Less than $10,000"
+                },
+                {
+                    "code": "b",
+                    "label": "$10,000-$20,000"
+                },
+                {
+                    "code": "c",
+                    "label": "$20,000-$30,000"
+                },
+                {
+                    "code": "d",
+                    "label": "$30,000-$40,000"
+                },
+                {
+                    "code": "e",
+                    "label": "$40,000-$50,000"
+                },
+                {
+                    "code": "f",
+                    "label": "$50,000-$60,000"
+                },
+                {
+                    "code": "g",
+                    "label": "$60,000-$80,000"
+                },
+                {
+                    "code": "h",
+                    "label": "$80,000-$100,000"
+                },
+                {
+                    "code": "i",
+                    "label": "Above $100,000"
+                },
+                {
+                    "code": "j",
+                    "label": "$50,000-$74,999"
+                },
+                {
+                    "code": "k",
+                    "label": "$75,000-$99,999"
+                },
+                {
+                    "code": "l",
+                    "label": "$100,000-$149,999"
+                },
+                {
+                    "code": "m",
+                    "label": "$150,000-$199,999"
+                },
+                {
+                    "code": "n",
+                    "label": "$200,000 or more"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "demo_income",
+            "description": "What is the family income per year:",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "a;b;c;d;e;f;g;h;i;j; k; l; m;n;-7",
+            "dataElementId": 1265860,
+            "notes": "",
+            "position": 68,
+            "size": 2,
+            "type": "String",
+            "id": 2085181,
+            "condition": null,
+            "aliases": [
+                "hincome",
+                "hincome2"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "medins",
+            "description": "do you have medical insurance",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292965,
+            "notes": "",
+            "position": 69,
+            "size": null,
+            "type": "Integer",
+            "id": 2085182,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "typeins",
+            "description": "type of medical insurance",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292915,
+            "notes": "",
+            "position": 70,
+            "size": null,
+            "type": "Integer",
+            "id": 2085183,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "mcaidhmo",
+            "description": "medicaid hmo",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292957,
+            "notes": "",
+            "position": 71,
+            "size": null,
+            "type": "Integer",
+            "id": 2085184,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "mcaid",
+            "description": "medicaid not hmo",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292946,
+            "notes": "",
+            "position": 72,
+            "size": null,
+            "type": "Integer",
+            "id": 2085185,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                }
+            ],
+            "filterElement": "1",
+            "name": "publicd",
+            "description": "Public Insurance: Medicare HMO",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1280417,
+            "notes": "",
+            "position": 73,
+            "size": null,
+            "type": "Integer",
+            "id": 2085186,
+            "condition": null,
+            "aliases": [
+                "mcarehmo"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "mcare",
+            "description": "medicare traditional",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292898,
+            "notes": "",
+            "position": 74,
+            "size": null,
+            "type": "Integer",
+            "id": 2085187,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "mcaresup",
+            "description": "medicare supplementary policy",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292917,
+            "notes": "",
+            "position": 75,
+            "size": null,
+            "type": "Integer",
+            "id": 2085188,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "mcarerx",
+            "description": "medicare pay for rx",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292912,
+            "notes": "",
+            "position": 76,
+            "size": null,
+            "type": "Integer",
+            "id": 2085189,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hmo",
+            "description": "private insurance hmo",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292960,
+            "notes": "",
+            "position": 77,
+            "size": null,
+            "type": "Integer",
+            "id": 2085190,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "nohmo",
+            "description": "private insurance not hmo",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292945,
+            "notes": "",
+            "position": 78,
+            "size": null,
+            "type": "Integer",
+            "id": 2085191,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "insrx",
+            "description": "private insurance pay rx",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292955,
+            "notes": "",
+            "position": 79,
+            "size": null,
+            "type": "Integer",
+            "id": 2085192,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "visitfee",
+            "description": "out of pocket fee or copay",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292908,
+            "notes": "",
+            "position": 80,
+            "size": null,
+            "type": "Integer",
+            "id": 2085193,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "fixedfee",
+            "description": "fixed copay or fee",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292899,
+            "notes": "",
+            "position": 81,
+            "size": null,
+            "type": "Integer",
+            "id": 2085194,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "percfee",
+            "description": "fee percentage",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292959,
+            "notes": "",
+            "position": 82,
+            "size": null,
+            "type": "Integer",
+            "id": 2085195,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "mhlimit",
+            "description": "limits on mental health",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292903,
+            "notes": "",
+            "position": 83,
+            "size": null,
+            "type": "Integer",
+            "id": 2085196,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "limitin",
+            "description": "limits inpatient days per year",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292930,
+            "notes": "",
+            "position": 84,
+            "size": null,
+            "type": "Integer",
+            "id": 2085197,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "limitout",
+            "description": "limits outpatient visits",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292931,
+            "notes": "",
+            "position": 85,
+            "size": null,
+            "type": "Integer",
+            "id": 2085198,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [],
+            "filterElement": "1",
+            "name": "site",
+            "description": "Site",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 16632,
+            "notes": "Study Site",
+            "position": 86,
+            "size": 100,
+            "type": "String",
+            "id": 2085199,
+            "condition": null,
+            "aliases": [
+                "siteid",
+                "site_id"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "forgo",
+            "description": "forgo recommended treatment",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292968,
+            "notes": "",
+            "position": 87,
+            "size": null,
+            "type": "Integer",
+            "id": 2085200,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "fvisit",
+            "description": "frequent followup visits",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292970,
+            "notes": "",
+            "position": 88,
+            "size": null,
+            "type": "Integer",
+            "id": 2085201,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "txad",
+            "description": "treatment antidepressant",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292972,
+            "notes": "",
+            "position": 89,
+            "size": null,
+            "type": "Integer",
+            "id": 2085202,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "txap",
+            "description": "treatment antipsychotic",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292973,
+            "notes": "",
+            "position": 90,
+            "size": null,
+            "type": "Integer",
+            "id": 2085203,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "txlith",
+            "description": "treatment lithium",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;0;-7",
+            "dataElementId": 1292222,
+            "notes": "",
+            "position": 91,
+            "size": null,
+            "type": "Integer",
+            "id": 2085204,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "txval",
+            "description": "treatment valproate",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;0;-7",
+            "dataElementId": 1292256,
+            "notes": "",
+            "position": 92,
+            "size": null,
+            "type": "Integer",
+            "id": 2085205,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "txms",
+            "description": "treatment other mood stabilizer",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292969,
+            "notes": "",
+            "position": 93,
+            "size": null,
+            "type": "Integer",
+            "id": 2085206,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "txnutra",
+            "description": "treatment nutraceutical",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292967,
+            "notes": "",
+            "position": 94,
+            "size": null,
+            "type": "Integer",
+            "id": 2085207,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "txpsi",
+            "description": "treatment psychosocial",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292966,
+            "notes": "",
+            "position": 95,
+            "size": null,
+            "type": "Integer",
+            "id": 2085208,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "txsh",
+            "description": "treatment selfhelp group",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1;-7",
+            "dataElementId": 1292971,
+            "notes": "",
+            "position": 96,
+            "size": null,
+            "type": "Integer",
+            "id": 2085209,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "txoth",
+            "description": "treatment other",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;0;-7",
+            "dataElementId": 1292350,
+            "notes": "",
+            "position": 97,
+            "size": null,
+            "type": "Integer",
+            "id": 2085210,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "ethnicity",
+            "description": "Ethnicity of participant",
+            "required": "Recommended",
+            "translations": [
+                {
+                    "values": [
+                        "1"
+                    ],
+                    "key": "Hispanic or Latino"
+                },
+                {
+                    "values": [
+                        "3"
+                    ],
+                    "key": "Unknown"
+                },
+                {
+                    "values": [
+                        "1"
+                    ],
+                    "key": "Hispanic or Latino"
+                },
+                {
+                    "values": [
+                        "1"
+                    ],
+                    "key": "Hispanic or Latino"
+                },
+                {
+                    "values": [
+                        "2"
+                    ],
+                    "key": "Not Hispanic or Latino"
+                },
+                {
+                    "values": [
+                        "2"
+                    ],
+                    "key": "Not Hispanic or Latino"
+                },
+                {
+                    "values": [
+                        "1"
+                    ],
+                    "key": "Hispanic or Latino"
+                },
+                {
+                    "values": [
+                        "3"
+                    ],
+                    "key": "Unknown"
+                },
+                {
+                    "values": [
+                        "2"
+                    ],
+                    "key": "Not Hispanic or Latino"
+                },
+                {
+                    "values": [
+                        "3"
+                    ],
+                    "key": "Unknown"
+                },
+                {
+                    "values": [
+                        "0"
+                    ],
+                    "key": "Not Hispanic or Latino"
+                }
+            ],
+            "valueRange": "Hispanic or Latino; Not Hispanic or Latino; Unknown",
+            "dataElementId": 19192,
+            "notes": null,
+            "position": 98,
+            "size": 30,
+            "type": "String",
+            "id": 2087170,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Full time"
+                },
+                {
+                    "code": "2",
+                    "label": "Part time for pay"
+                },
+                {
+                    "code": "3",
+                    "label": "Homemaker"
+                },
+                {
+                    "code": "4",
+                    "label": "Incarcerated"
+                },
+                {
+                    "code": "5",
+                    "label": "Disabled"
+                },
+                {
+                    "code": "6",
+                    "label": "Leave of absence"
+                },
+                {
+                    "code": "7",
+                    "label": "Unemployed"
+                },
+                {
+                    "code": "8",
+                    "label": "Retired"
+                },
+                {
+                    "code": "9",
+                    "label": "Other"
+                },
+                {
+                    "code": "10",
+                    "label": "Student"
+                },
+                {
+                    "code": "11",
+                    "label": "Volunteer"
+                },
+                {
+                    "code": "-7",
+                    "label": "Refused"
+                }
+            ],
+            "filterElement": "1",
+            "name": "employcur",
+            "description": "current employment status",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::11;-7",
+            "dataElementId": 1295252,
+            "notes": "",
+            "position": 99,
+            "size": null,
+            "type": "Integer",
+            "id": 2087893,
+            "condition": null,
+            "aliases": [
+                "employ",
+                "dem8emp"
+            ]
+        },
+        {
+            "valueset": [],
+            "filterElement": "1",
+            "name": "fseqno",
+            "description": "Sequence Number",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0::999",
+            "dataElementId": 1317536,
+            "notes": "The FSEQNO variable in the ADJ form has a special interpretation compared to other forms.\nFor example, ADJ FSEQNO of '1' can be thought of as being '001', FSEQNO of '2' can be thought of as\nbeing '002', and FSEQNO of '3' can be thought of as being '003'.\nThe first digit of FSEQNO relates to the corresponding ENF sequence number at that visit and the third\ndigit relates to the specific adjudicator who completed the adjudication form.",
+            "position": 100,
+            "size": null,
+            "type": "Integer",
+            "id": 2113134,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "visday",
+            "description": "Number of days from study baseline to date of visit",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1279304,
+            "notes": null,
+            "position": 101,
+            "size": null,
+            "type": "Integer",
+            "id": 2113135,
+            "condition": null,
+            "aliases": [
+                "dema0b"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hispanic",
+            "description": "Is subject of Hispanic, Latino, or Spanish origin?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0; 1",
+            "dataElementId": 1242877,
+            "notes": "",
+            "position": 102,
+            "size": null,
+            "type": "Integer",
+            "id": 2113136,
+            "condition": null,
+            "aliases": [
+                "dema4",
+                "hisp",
+                "dem3"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Independent Living. Live alone, with spouse, family or friend, in an apartment or house."
+                },
+                {
+                    "code": "2",
+                    "label": "Minimally Structured Residence. Live in a supervised apartment program, boarding home, adult foster care."
+                },
+                {
+                    "code": "3",
+                    "label": "Moderately Restrictive Residence. Live in a halfway house, treatment program, acute psychiatric diversion facility, treatment lodge"
+                },
+                {
+                    "code": "4",
+                    "label": "Extremely Restrictive Residence. Psychiatric hospital, skilled nursing facility, jail or prison."
+                },
+                {
+                    "code": "5",
+                    "label": "Homeless. Has been homeless or in emergency shelter for the homeless"
+                },
+                {
+                    "code": "6",
+                    "label": "Lives in someone elses apartment, room or house"
+                },
+                {
+                    "code": "7",
+                    "label": "Dormitory/College residence"
+                },
+                {
+                    "code": "8",
+                    "label": "Residential treatment"
+                },
+                {
+                    "code": "9",
+                    "label": "Other, specify"
+                }
+            ],
+            "filterElement": "1",
+            "name": "dema6",
+            "description": "Which Best describes your current living situation?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::9",
+            "dataElementId": 1317957,
+            "notes": "",
+            "position": 103,
+            "size": null,
+            "type": "Integer",
+            "id": 2113137,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "0",
+                    "label": "No"
+                }
+            ],
+            "filterElement": "1",
+            "name": "dema8",
+            "description": "Did you earn a high school diploma or GED",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1317958,
+            "notes": "",
+            "position": 104,
+            "size": null,
+            "type": "Integer",
+            "id": 2113138,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "edutot",
+            "description": "Total years of education",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1283382,
+            "notes": null,
+            "position": 105,
+            "size": null,
+            "type": "Float",
+            "id": 2113139,
+            "condition": null,
+            "aliases": [
+                "yrsedcn",
+                "educ_yrs",
+                "dema7"
+            ]
+        },
+        {
+            "filterElement": null,
+            "name": "version_form",
+            "description": "Form used",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1297560,
+            "notes": null,
+            "position": 106,
+            "size": 20,
+            "type": "String",
+            "id": 2113140,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                }
+            ],
+            "filterElement": "1",
+            "name": "marist",
+            "description": "Marital status",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1297603,
+            "notes": "",
+            "position": 107,
+            "size": null,
+            "type": "Integer",
+            "id": 2123499,
+            "condition": null,
+            "aliases": [
+                "marital2"
+            ]
+        },
+        {
+            "valueset": [],
+            "filterElement": null,
+            "name": "ac_residence",
+            "description": "Location of residence?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1325805,
+            "notes": "Other",
+            "position": 108,
+            "size": 20,
+            "type": "String",
+            "id": 2123500,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": null,
+            "name": "curreduccompleted",
+            "description": "Current grade education level completed",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 5926,
+            "notes": null,
+            "position": 109,
+            "size": 50,
+            "type": "String",
+            "id": 2123501,
+            "condition": null,
+            "aliases": [
+                "ac_educatn"
+            ]
+        },
+        {
+            "valueset": [],
+            "filterElement": null,
+            "name": "parntedu",
+            "description": "How far did your parents go in school?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1325804,
+            "notes": " Unknown",
+            "position": 110,
+            "size": 100,
+            "type": "String",
+            "id": 2123502,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": null,
+            "name": "cg1_gender",
+            "description": "Caregiver 1's Gender",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "Male;Female",
+            "dataElementId": 1251398,
+            "notes": null,
+            "position": 111,
+            "size": 10,
+            "type": "String",
+            "id": 2123503,
+            "condition": null,
+            "aliases": [
+                "caregen"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "Adoptive Dad"
+                },
+                {
+                    "code": "1",
+                    "label": "Adoptive Mom"
+                },
+                {
+                    "code": "2",
+                    "label": "Biological Dad"
+                },
+                {
+                    "code": "3",
+                    "label": "Biological Mom"
+                },
+                {
+                    "code": "4",
+                    "label": "Grandpa"
+                },
+                {
+                    "code": "5",
+                    "label": "Grandma"
+                },
+                {
+                    "code": "6",
+                    "label": "Uncle"
+                },
+                {
+                    "code": "7",
+                    "label": "Aunt"
+                },
+                {
+                    "code": "8",
+                    "label": "Gay partner"
+                },
+                {
+                    "code": "9",
+                    "label": "Lesbian partner"
+                },
+                {
+                    "code": "10",
+                    "label": "0  Parent's male/boyfriend"
+                },
+                {
+                    "code": "11",
+                    "label": "1 Parent's female/girlfriend"
+                },
+                {
+                    "code": "12",
+                    "label": "2 Step Dad"
+                },
+                {
+                    "code": "13",
+                    "label": "3 Step Mom"
+                },
+                {
+                    "code": "-99",
+                    "label": "NA"
+                },
+                {
+                    "code": "77",
+                    "label": "Refused"
+                },
+                {
+                    "code": "88",
+                    "label": "Missing"
+                }
+            ],
+            "filterElement": "1",
+            "name": "relation_prim",
+            "description": "Primary caregiver relationship to subject",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0::13;-77;88;99",
+            "dataElementId": 1325446,
+            "notes": "",
+            "position": 112,
+            "size": null,
+            "type": "Integer",
+            "id": 2123504,
+            "condition": null,
+            "aliases": [
+                "caregivr"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "If the caregiver did not finish high school or obtain a GED, indicate years of education"
+                },
+                {
+                    "code": "2",
+                    "label": "Unknown"
+                },
+                {
+                    "code": "3",
+                    "label": "GED/high school diploma"
+                },
+                {
+                    "code": "4",
+                    "label": "Some college, did not graduate"
+                },
+                {
+                    "code": "5",
+                    "label": "Community college or technical school degree (e.g. AA)"
+                },
+                {
+                    "code": "6",
+                    "label": "College graduate"
+                },
+                {
+                    "code": "7",
+                    "label": "College graduate and some Master's level courses"
+                },
+                {
+                    "code": "8",
+                    "label": "Master's degree completed 9 = Advanced degree courses, not graduateD (e.g. PhD, MD, DVM, DDS,JD)"
+                },
+                {
+                    "code": "10",
+                    "label": "Advanced degree completed [e.g. PhD, MD, DVM, DDS, JD)"
+                }
+            ],
+            "filterElement": "1",
+            "name": "bicgscho",
+            "description": "How far did the caregiver go in school?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::10",
+            "dataElementId": 1325032,
+            "notes": "",
+            "position": 113,
+            "size": null,
+            "type": "Integer",
+            "id": 2123505,
+            "condition": null,
+            "aliases": [
+                "careedu"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                }
+            ],
+            "filterElement": "1",
+            "name": "exacer",
+            "description": "Has patient been hospitalized or required crisis stabilization services in the past three months for any mental health problem?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1279453,
+            "notes": " Baseline covariate adjusted for in many statsitical models based on analysis plan",
+            "position": 114,
+            "size": null,
+            "type": "Integer",
+            "id": 2123506,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "bicgage",
+            "description": "Caregiver's Age",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1325040,
+            "notes": null,
+            "position": 115,
+            "size": null,
+            "type": "Integer",
+            "id": 2123507,
+            "condition": null,
+            "aliases": [
+                "careage"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": ".z < AGE <= 69"
+                },
+                {
+                    "code": "2",
+                    "label": "70 <= AGE <= 74"
+                },
+                {
+                    "code": "3",
+                    "label": "75 <= AGE <= 79"
+                },
+                {
+                    "code": "4",
+                    "label": "80 <= AGE <= 84"
+                },
+                {
+                    "code": "5",
+                    "label": "AGE >"
+                }
+            ],
+            "filterElement": "1",
+            "name": "agecat",
+            "description": "Subject Age Categorized",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1325806,
+            "notes": " missing otherwise",
+            "position": 116,
+            "size": null,
+            "type": "Integer",
+            "id": 2123508,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "caregvr2",
+            "description": "Caregiver subgroup (spouse, son/daughter)",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1325803,
+            "notes": null,
+            "position": 117,
+            "size": null,
+            "type": "Integer",
+            "id": 2123509,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "residnc2",
+            "description": "Residence categorized (own home vs not)",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1325802,
+            "notes": null,
+            "position": 118,
+            "size": null,
+            "type": "Integer",
+            "id": 2123510,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Yes for patients screened multiple times for inclusion in the study"
+                }
+            ],
+            "filterElement": "1",
+            "name": "rescreen",
+            "description": "Rescreened",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1279482,
+            "notes": " missing otherwise",
+            "position": 119,
+            "size": null,
+            "type": "Integer",
+            "id": 2123511,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [],
+            "filterElement": "1",
+            "name": "scrn_dy",
+            "description": "Day Screened",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1279483,
+            "notes": "Number of days from study baseline to date of screening",
+            "position": 120,
+            "size": null,
+            "type": "Integer",
+            "id": 2123512,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Married/Common Law"
+                },
+                {
+                    "code": "2",
+                    "label": "Never Married"
+                },
+                {
+                    "code": "3",
+                    "label": "Married and Seperated"
+                },
+                {
+                    "code": "4",
+                    "label": "Divorced or Annulled"
+                },
+                {
+                    "code": "5",
+                    "label": "Widowed"
+                },
+                {
+                    "code": "6",
+                    "label": "Living with someone as though married"
+                }
+            ],
+            "filterElement": "1",
+            "name": "married",
+            "description": "Are you married?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::6",
+            "dataElementId": 1274785,
+            "notes": "",
+            "position": 121,
+            "size": null,
+            "type": "Integer",
+            "id": 2132538,
+            "condition": null,
+            "aliases": [
+                "dem6"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Married"
+                },
+                {
+                    "code": "0",
+                    "label": "Not married"
+                }
+            ],
+            "filterElement": "1",
+            "name": "marital2",
+            "description": "Marital Stat categorized (married vs not)",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1279455,
+            "notes": "",
+            "position": 122,
+            "size": null,
+            "type": "Integer",
+            "id": 2132539,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "less than 12th grade, 2=12th grade, 3= more than 12th grade"
+                }
+            ],
+            "filterElement": "1",
+            "name": "lths",
+            "description": "Education Group ",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::3",
+            "dataElementId": 1332706,
+            "notes": "",
+            "position": 123,
+            "size": null,
+            "type": "Integer",
+            "id": 2132540,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "no"
+                },
+                {
+                    "code": "1",
+                    "label": "12th grade"
+                }
+            ],
+            "filterElement": "1",
+            "name": "hs",
+            "description": "High School",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1332712,
+            "notes": "",
+            "position": 124,
+            "size": null,
+            "type": "Integer",
+            "id": 2132541,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "no, 1=more than 12th grade"
+                }
+            ],
+            "filterElement": "1",
+            "name": "smcoll",
+            "description": "Some College",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1332698,
+            "notes": "",
+            "position": 125,
+            "size": null,
+            "type": "Integer",
+            "id": 2132542,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                }
+            ],
+            "filterElement": "1",
+            "name": "workpay",
+            "description": "Are you a worker for pay?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1323101,
+            "notes": "",
+            "position": 126,
+            "size": null,
+            "type": "Integer",
+            "id": 2132543,
+            "condition": null,
+            "aliases": [
+                "dem8a"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Full time"
+                },
+                {
+                    "code": "2",
+                    "label": "Part time"
+                }
+            ],
+            "filterElement": "1",
+            "name": "mw_j1b",
+            "description": "Job 1 \ufffd full or part time",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1302954,
+            "notes": "",
+            "position": 127,
+            "size": null,
+            "type": "Integer",
+            "id": 2132544,
+            "condition": null,
+            "aliases": [
+                "dem8b"
+            ]
+        },
+        {
+            "filterElement": "1",
+            "name": "dem8cday",
+            "description": "During the past 4 weeks, how many days of work did you miss due to illness",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0::30",
+            "dataElementId": 1332713,
+            "notes": null,
+            "position": 128,
+            "size": null,
+            "type": "Integer",
+            "id": 2132545,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "dem8dday",
+            "description": "During the past 4 weeks, how many days were you late to work or did you have to leave early due to illness or doctor visits.",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0::30",
+            "dataElementId": 1332716,
+            "notes": null,
+            "position": 129,
+            "size": null,
+            "type": "Integer",
+            "id": 2132546,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "calm_inc1",
+            "description": "How much income did you earn from work in the last year",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1332704,
+            "notes": null,
+            "position": 130,
+            "size": null,
+            "type": "Integer",
+            "id": 2132547,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "2",
+                    "label": "No"
+                }
+            ],
+            "filterElement": "1",
+            "name": "calm_inc1a",
+            "description": "Does annual income amount to $22,000 or more?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1332701,
+            "notes": "",
+            "position": 131,
+            "size": null,
+            "type": "Integer",
+            "id": 2132548,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "2",
+                    "label": "No"
+                }
+            ],
+            "filterElement": "1",
+            "name": "calm_inc1b",
+            "description": "Does annual income amount to $11,000 or more?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1332710,
+            "notes": "",
+            "position": 132,
+            "size": null,
+            "type": "Integer",
+            "id": 2132549,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "2",
+                    "label": "No"
+                }
+            ],
+            "filterElement": "1",
+            "name": "calm_inc1c",
+            "description": "Does annual income amount to $35,000 or more?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1332702,
+            "notes": "",
+            "position": 133,
+            "size": null,
+            "type": "Integer",
+            "id": 2132550,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "calm_inc2",
+            "description": "How much total income did you and your family receive from work and other sources such as interest or dividends, pensions or social security, income from rental property, estates, or trusts, public assistance or welfare, unemployment compensation, disability income, child support or other sources?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1332711,
+            "notes": null,
+            "position": 134,
+            "size": null,
+            "type": "Integer",
+            "id": 2132551,
+            "condition": null,
+            "aliases": [
+                "famincom"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "2",
+                    "label": "No"
+                }
+            ],
+            "filterElement": "1",
+            "name": "calm_inc2a",
+            "description": "Would total family income amount to $30,000 or more?",
+            "required": "Recommended",
+            "translations": [
+                {
+                    "values": [
+                        "Yes"
+                    ],
+                    "key": "1"
+                },
+                {
+                    "values": [
+                        "No"
+                    ],
+                    "key": "2"
+                }
+            ],
+            "valueRange": "1;2",
+            "dataElementId": 1332715,
+            "notes": "",
+            "position": 135,
+            "size": null,
+            "type": "Integer",
+            "id": 2132552,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "2",
+                    "label": "No"
+                }
+            ],
+            "filterElement": "1",
+            "name": "calm_inc2b",
+            "description": "Would total family income amount to $13,000 or more?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1332714,
+            "notes": "",
+            "position": 136,
+            "size": null,
+            "type": "Integer",
+            "id": 2132553,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "Yes"
+                },
+                {
+                    "code": "2",
+                    "label": "No"
+                }
+            ],
+            "filterElement": "1",
+            "name": "calm_inc2c",
+            "description": "Would total family income amount to $57,000 or more?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1;2",
+            "dataElementId": 1332700,
+            "notes": "",
+            "position": 137,
+            "size": null,
+            "type": "Integer",
+            "id": 2132554,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [],
+            "filterElement": "1",
+            "name": "calm_inc3",
+            "description": "Including you, how many people in your family were supported by this total income in last year",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1332697,
+            "notes": "number supported",
+            "position": 138,
+            "size": null,
+            "type": "Integer",
+            "id": 2132555,
+            "condition": null,
+            "aliases": [
+                "famsize"
+            ]
+        },
+        {
+            "filterElement": "1",
+            "name": "calm_inc3a",
+            "description": "How many family supported by total income last year were children under the age of 18 who were related to you?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1332709,
+            "notes": null,
+            "position": 139,
+            "size": null,
+            "type": "Integer",
+            "id": 2132556,
+            "condition": null,
+            "aliases": [
+                "totkids"
+            ]
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "more than need"
+                },
+                {
+                    "code": "2",
+                    "label": "just enough"
+                },
+                {
+                    "code": "3",
+                    "label": "not enough"
+                }
+            ],
+            "filterElement": "1",
+            "name": "calm_inc4",
+            "description": "In general, would you say (you have/your family living here has) more money than you need, just enough money for your needs, or not enough to meet your needs?",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "1::3",
+            "dataElementId": 1332717,
+            "notes": "",
+            "position": 140,
+            "size": null,
+            "type": "Integer",
+            "id": 2132557,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [],
+            "filterElement": "1",
+            "name": "poverty2",
+            "description": "poverty index for famsize, age, and number of kids",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1332707,
+            "notes": "using Poverty_Thresholds_2005.doc found at http://www.census.gov/hhes/www/poverty/data/threshld/thresh05.html",
+            "position": 141,
+            "size": null,
+            "type": "Integer",
+            "id": 2132558,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "pincomage",
+            "description": "adjusted by age, famsize, and number of kids",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1332699,
+            "notes": null,
+            "position": 142,
+            "size": null,
+            "type": "Float",
+            "id": 2132559,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "(1",
+                    "label": "pincomage<=1, 0= Ppincomage>1)"
+                }
+            ],
+            "filterElement": "1",
+            "name": "ses1",
+            "description": "socioeconmic status 1",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1332705,
+            "notes": "",
+            "position": 143,
+            "size": null,
+            "type": "Integer",
+            "id": 2132560,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "(1",
+                    "label": "pincomage <=2, 0=pincomage >2)"
+                }
+            ],
+            "filterElement": "1",
+            "name": "ses2",
+            "description": "socioeconmic status 2",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1332708,
+            "notes": "",
+            "position": 144,
+            "size": null,
+            "type": "Integer",
+            "id": 2132561,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "0",
+                    "label": "No"
+                },
+                {
+                    "code": "1",
+                    "label": "Yes"
+                }
+            ],
+            "filterElement": "1",
+            "name": "usborn",
+            "description": "US born",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1332703,
+            "notes": "",
+            "position": 145,
+            "size": null,
+            "type": "Integer",
+            "id": 2132562,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "clinicid",
+            "description": "Clinic ID",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1289260,
+            "notes": null,
+            "position": 146,
+            "size": null,
+            "type": "Integer",
+            "id": 2134559,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "days_baseline",
+            "description": "Days since baseline",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1283017,
+            "notes": null,
+            "position": 147,
+            "size": null,
+            "type": "Integer",
+            "id": 2134560,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "filterElement": "1",
+            "name": "interviewmonth",
+            "description": "Interview Month",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": null,
+            "dataElementId": 1243639,
+            "notes": null,
+            "position": 148,
+            "size": null,
+            "type": "Integer",
+            "id": 2134561,
+            "condition": null,
+            "aliases": []
+        },
+        {
+            "valueset": [
+                {
+                    "code": "1",
+                    "label": "ITV, intervention"
+                },
+                {
+                    "code": "0",
+                    "label": "TAU, treatment as usual"
+                }
+            ],
+            "filterElement": "1",
+            "name": "interv",
+            "description": "Intervention Status",
+            "required": "Recommended",
+            "translations": [],
+            "valueRange": "0;1",
+            "dataElementId": 1330846,
+            "notes": "",
+            "position": 149,
+            "size": null,
+            "type": "Integer",
+            "id": 2134562,
+            "condition": null,
+            "aliases": []
+        }
+    ]
+}
