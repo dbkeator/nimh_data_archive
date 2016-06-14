@@ -84,13 +84,18 @@ class DataElement(object):
         self.name = data.get('name')
         self.type = data.get('type')
         self.description = data.get('description')
-        self.value_range = data.get('valueRange')
         self.title = data.get('title')
         if self.data.get('notes'):
             self.notes = self.parse_notes()
+        if self.data.get('valueRange'):
+            self.value_range = self.parse_value_range()
 
     def parse_notes(self):
-        return self.data.get('notes')
+        notes = self.data.get('notes')
+        return notes
+
+    def parse_value_range(self):
+        return self.data.get('valueRange')
 
     def __repr__(self):
         return "{0}:{1}".format(self.__class__, self.name)
@@ -100,10 +105,13 @@ def main(args=None):
     api = 'https://ndar.nih.gov/api/datadictionary/v2'
     data_dict = DataDictionary(api)
     data_dict.get_data_sructures()
+    results = []
     for i in args.data_structures:
         data_structure = data_dict.data_structures.get(i)
         data_structure.get_data_elements()
-        print(json.dumps(data_structure.json))
+        results.append(data_structure.json)
+    for i in results:
+        print(json.dumps(i))
 
 
 if __name__ == "__main__":
