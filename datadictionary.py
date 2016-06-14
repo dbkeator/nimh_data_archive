@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 """
-============================
-RDoCdb Data Structure Client
-============================
+NIMH Data Archive Data Structure Client
 
 """
 __author__ = 'Nolan Nichols <https://orcid.org/0000-0003-1099-3328>'
 
 import os
+import json
 import sys
 
 import requests
@@ -19,7 +18,7 @@ class Connection(object):
         self.request = requests.get(self.url)
 
     def __repr__(self):
-        return "{0}:{1}".format(self.__class__, self.name)
+        return "{0}:{1}".format(self.__class__, self.url)
 
 
 class DataDictionary(Connection):
@@ -55,6 +54,7 @@ class DataStructure(object):
         self.status = data.get('status')
         self.title = data.get('title')
         self.url = url
+        self.data = data
 
     def __repr__(self):
         return "{0}:{1}".format(self.__class__, self.short_name)
@@ -71,6 +71,7 @@ class DataStructure(object):
 
 class DataElement(object):
     def __init__(self, data):
+        self.data = data
         self.required = data.get('required')
         self.aliases = data.get('aliases')
         self.position = data.get('position')
@@ -79,12 +80,23 @@ class DataElement(object):
         self.description = data.get('description')
         self.value_range = data.get('valueRange')
         self.title = data.get('title')
+        if data.get('notes'):
+            self.notes = self.parse_notes()
+
+    def parse_notes(self):
+        return self.data.get('notes')
 
     def __repr__(self):
         return "{0}:{1}".format(self.__class__, self.name)
 
+
 def main(args=None):
-    pass
+    api = 'https://ndar.nih.gov/api/datadictionary/v2'
+    data_dict = DataDictionary(api)
+    data_structures = data_dict.get_data_sructures()
+    for i in args.data_structures:
+        data_structure = data_structures.get(i)
+        print(json.dumps(data_structure.data))
 
 
 if __name__ == "__main__":
@@ -95,5 +107,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="datastructure.py",
                                      description=__doc__,
                                      formatter_class=formatter)
+    parser.add_argument('-d', '--data-structures',
+                        nargs='*',
+                        help="List of 1 of more data structures to download.")
     args = parser.parse_args()
     sys.exit(main(args=args))
