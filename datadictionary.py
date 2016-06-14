@@ -32,6 +32,7 @@ class DataDictionary(Connection):
         self.version = self.json.get('version')
         self.description = self.json.get('description')
         self.operations = self.json.get('operations')
+        self.data_structures = None
 
     def __repr__(self):
         return "{0}:{1}".format(self.__class__, self.name)
@@ -43,7 +44,7 @@ class DataDictionary(Connection):
         result = dict()
         for ds in data:
             result.update({ds.get('shortName'): DataStructure(ds, self.url)})
-        return result
+        self.data_structures = result
 
 
 class DataStructure(object):
@@ -56,8 +57,10 @@ class DataStructure(object):
         self.source = data.get('source')
         self.status = data.get('status')
         self.title = data.get('title')
+        self.json = None
         self.url = url
         self.data = data
+        self.data_elements = None
 
     def __repr__(self):
         return "{0}:{1}".format(self.__class__, self.short_name)
@@ -65,11 +68,11 @@ class DataStructure(object):
     def get_data_elements(self):
         ds_url = '{0}/datastructure/{1}'.format(self.url, self.short_name)
         request = requests.get(ds_url)
-        data = request.json()
+        self.json = request.json()
         result = dict()
-        for de in data.get('dataElements'):
+        for de in self.json.get('dataElements'):
             result.update({de.get('name'): DataElement(de)})
-        return result
+        self.data_elements = result
 
 
 class DataElement(object):
@@ -83,7 +86,7 @@ class DataElement(object):
         self.description = data.get('description')
         self.value_range = data.get('valueRange')
         self.title = data.get('title')
-        if data.get('notes'):
+        if self.data.get('notes'):
             self.notes = self.parse_notes()
 
     def parse_notes(self):
@@ -96,10 +99,11 @@ class DataElement(object):
 def main(args=None):
     api = 'https://ndar.nih.gov/api/datadictionary/v2'
     data_dict = DataDictionary(api)
-    data_structures = data_dict.get_data_sructures()
+    data_dict.get_data_sructures()
     for i in args.data_structures:
-        data_structure = data_structures.get(i)
-        print(json.dumps(data_structure.data))
+        data_structure = data_dict.data_structures.get(i)
+        data_structure.get_data_elements()
+        print(json.dumps(data_structure.json))
 
 
 if __name__ == "__main__":
