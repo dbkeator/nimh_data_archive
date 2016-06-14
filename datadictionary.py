@@ -92,7 +92,20 @@ class DataElement(object):
 
     def parse_notes(self):
         notes = self.data.get('notes')
-        return notes
+        codelist = notes.split(";")
+        valueset = list()
+        for codes in codelist:
+            values = codes.split("=", 1)
+            if (len(values) > 1) and not (self.data.get('notes') == ""):
+                self.data.update({'notes': ""})
+            if len(values) > 1:
+                result = dict()
+                result.update({'code': values[0].strip()})
+                result.update({'label': values[1].strip()})
+                valueset.append(result)
+            else:
+                self.data.update({'notes': values[0]})
+        self.data.update({'valueset': valueset})
 
     def parse_value_range(self):
         return self.data.get('valueRange')
