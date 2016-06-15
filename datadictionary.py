@@ -115,8 +115,7 @@ def main(args=None):
         data_structure = data_dict.data_structures.get(i)
         data_structure.get_data_elements()
         results.append(data_structure.json)
-    for i in results:
-        print(json.dumps(i))
+        print(json.dumps(data_structure.json))
 
 
 if __name__ == "__main__":
