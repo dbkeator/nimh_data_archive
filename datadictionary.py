@@ -130,5 +130,5 @@ if __name__ == "__main__":
     parser.add_argument('-d', '--data-structures',
                         nargs='*',
                         help="List of 1 of more data structures to download.")
-    args = parser.parse_args()
-    sys.exit(main(args=args))
+    argv = parser.parse_args()
+    sys.exit(main(args=argv))
